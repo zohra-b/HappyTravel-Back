@@ -19,16 +19,21 @@ class UserController extends Controller
         ]);
 
         $user = new User();
-        $user->name=$request->name;
-        $user->email=$request->email;
-        $user->password=Hash::make($request->password);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
 
 
         $user->save();
 
+        $token = $user->createToken('auth_token')->plainTextToken;
+
+
         return response()->json([
-            'status'=>1, 
-            'msg'=>'Registrado correctamente'
+            'status' => 1,
+            'msg' => 'Registrado correctamente',
+            'access_token' => $token
+
         ]);
     }
 
@@ -51,5 +56,22 @@ class UserController extends Controller
                 'access_token' => $token
             ]);
         };
+    }
+    public function userProfile()
+    {
+        return response()->json([
+            'status' => 1,
+            'msg' => 'Perfil de usuario',
+            'data' => auth()->user()
+        ]);
+    }
+    public function logout()
+    {
+        auth()->user()->tokens()->delete();
+        return response()->json([
+            'status' => 1,
+            'msg' => 'Sesión cerrada',
+
+        ]);
     }
 }

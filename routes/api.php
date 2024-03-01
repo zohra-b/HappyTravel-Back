@@ -12,3 +12,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('user-profile', [UserController::class, 'userProfile']); // get('ruta', [UserController::class, 'nombre-de-la-funcion'])
+    Route::get('logout', [UserController::class, 'logout']);
+});

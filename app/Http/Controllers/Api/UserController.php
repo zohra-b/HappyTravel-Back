@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Api;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class UserController extends Controller
 {
-    public function registrer(Request $request) {
+    public function register(Request $request) {
         $request->validate([
             'name'=>'required',
             'email'=>'required|email|unique:users',
@@ -18,10 +20,17 @@ class UserController extends Controller
         $user = new User();
         $user->name->$request->name;
         $user->email->$request->email;
-        $user->password->$request->password;
+        $user->password=Hash::make($request->password);
+
 
         $user->save();
-        //rutas / api /endpoint
+        
+        return response()->json([
+            'status'=>1, 
+            'msg'=>'Registrado correctamente'
+        ]);
+        
+        
 
     }
 

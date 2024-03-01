@@ -6,8 +6,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Symfony\Component\HttpKernel\Event\ResponseEvent;
-use Symfony\Contracts\Service\Attribute\Required;
+
 
 class UserController extends Controller
 {
@@ -20,16 +19,16 @@ class UserController extends Controller
         ]);
 
         $user = new User();
-        $user->name->$request->name;
-        $user->email->$request->email;
-        $user->password = Hash::make($request->password);
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->password=Hash::make($request->password);
 
 
         $user->save();
 
         return response()->json([
-            'status' => 1,
-            'msg' => 'Registrado correctamente'
+            'status'=>1, 
+            'msg'=>'Registrado correctamente'
         ]);
     }
 

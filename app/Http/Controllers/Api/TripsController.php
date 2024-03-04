@@ -16,7 +16,8 @@ class TripsController extends Controller
         return response()->json($trips, 200);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $request->validate([
             'title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
@@ -31,12 +32,41 @@ class TripsController extends Controller
             $trip->location = $request->location;
             $trip->image = $request->image;
             $trip->description = $request->description;
-    
+
             $user->trips()->save($trip);
-    
+
             return response()->json(['message' => 'Trip created successfully'], 201);
         } else {
             return response()->json(['message' => 'Unauthorized'], 401);
         }
-}
+    }
+
+    public function update(Request $request, $id)
+    {
+        $trip = Trips::findOrFail($id);
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'description' => 'string|max:500',
+        ]);
+
+        $user = Auth::user();
+
+        if ($user) {
+            $trip->title = $request->title;
+            $trip->location = $request->location;
+            $trip->description = $request->description;
+
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('images');
+                $trip->image = $imagePath;
+            }
+
+            $trip->save();
+
+            return response()->json(['message' => 'Trip updated successfully'], 201);
+        } else {
+            return response()->json(['message' => 'Unauthorized'], 401);
+        }
+    }
 }

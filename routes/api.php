@@ -16,6 +16,7 @@ Route::post('login', [UserController::class, 'login']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('user-profile', [UserController::class, 'userProfile']); // get('ruta', [UserController::class, 'nombre-de-la-funcion'])
     Route::get('logout', [UserController::class, 'logout']);
-    Route::post('store',[TripsController::class, 'store']);
+    Route::post('store', [TripsController::class, 'store']);
+    Route::put('trip/{id}', [TripsController::class, 'update']);
 });
 Route::get('/', [TripsController::class, 'index']);

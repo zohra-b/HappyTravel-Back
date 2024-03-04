@@ -34,9 +34,19 @@ class TripsController extends Controller
     
             $user->trips()->save($trip);
     
-            return response()->json(['message' => 'Trip created successfully'], 201);
+            return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
         } else {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['message' => 'No autorizado'], 401);
         }
-}
+    
+    }       
+    public function destroy($id) {
+        $trip = Trips::findOrFail($id);
+        if(!$trip){
+            return  response()->json(['message'=>'Viaje no encontrado'],404);
+        }
+        $trip->delete();
+        
+        return response()->json(['message'=>'Se ha eliminado el viaje'],200);
+    }
 }

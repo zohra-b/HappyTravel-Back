@@ -17,5 +17,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('user-profile', [UserController::class, 'userProfile']); // get('ruta', [UserController::class, 'nombre-de-la-funcion'])
     Route::get('logout', [UserController::class, 'logout']);
     Route::post('store',[TripsController::class, 'store']);
+    Route::delete('trip/{id}',[TripsController::class, 'destroy']);
 });
 Route::get('/', [TripsController::class, 'index']);

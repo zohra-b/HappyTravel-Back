@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\TripsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('user-profile', [UserController::class, 'userProfile']); // get('ruta', [UserController::class, 'nombre-de-la-funcion'])
     Route::get('logout', [UserController::class, 'logout']);
 });
+Route::get('/', [TripsController::class, 'index']);

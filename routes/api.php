@@ -20,3 +20,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('trip/{id}',[TripsController::class, 'destroy']);
 });
 Route::get('/', [TripsController::class, 'index']);
+Route::get('search', [TripsController::class,'search']);

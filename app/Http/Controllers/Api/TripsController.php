@@ -49,4 +49,20 @@ class TripsController extends Controller
         
         return response()->json(['message'=>'Se ha eliminado el viaje'],200);
     }
+
+    public function search(Request $request)
+    {
+        $request-> validate([
+            'search' => 'required|string|min:3'
+        ]);
+        $trips=Trips::where('title', 'like', '%'.$request->input('search').'%' )
+                ->orWhere('location', 'like', '%'.$request->input('search').'%' )
+                ->orWhere('description', 'like', '%'.$request->input('search').'%' )
+                ->get();
+        
+        if($trips->count()===0){
+            return  response()->json(['message'=>'No hay resultados que coincidan con su búsqueda'],404);
+        }
+        return response()->json($trips);
+    }
 }

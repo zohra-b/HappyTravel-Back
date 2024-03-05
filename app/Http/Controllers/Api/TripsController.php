@@ -49,4 +49,15 @@ class TripsController extends Controller
         
         return response()->json(['message'=>'Se ha eliminado el viaje'],200);
     }
+
+    public function getById($id){
+        
+    $trip = Trips::find($id);
+
+    if (!$trip) {
+        return response()->json(['message' => 'Trip not found'], 404);
+    }
+
+    return response()->json($trip, 200);
+}
 }

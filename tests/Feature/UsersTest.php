@@ -41,21 +41,22 @@ class UsersTest extends TestCase
 
     public function test_if_the_logout_function(): void
     {
-        $user = User::factory()->create([
+        $user = [
             'name' => 'Zohra',
             'email' => 'zohra@gmail.com',
             'password' => '123456789',
             'password_confirmation' => '123456789'
-        ]);
-
-        $token = $user->createToken('TestToken')->plainTextToken;
-
-        // $response = $this->postJson('/api/register', );
-        // $response = $this->getJson('/api/user-profile', $user);
-        // $response = $this->getJson('/api/logout', $user);
+        ];
+    
+        $this->postJson('/api/register', $user);
+    
+        $response = $this->postJson('/api/login', $user);
+    
+        $token = $response->json('access_token');
+    
         $response = $this->withHeaders(['Authorization' => 'Bearer ' . $token])
-        ->getJson('/api/logout');
-
+                         ->getJson('/api/logout');
+    
         $response->assertJsonFragment(['msg' => 'Sesión cerrada']);
     }
 }

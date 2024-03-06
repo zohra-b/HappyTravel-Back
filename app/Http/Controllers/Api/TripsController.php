@@ -65,4 +65,22 @@ class TripsController extends Controller
         }
         return response()->json($trips);
     }
+
+    public function getById($id){
+        
+    $trip = Trips::find($id);
+
+    if (!$trip) {
+        return response()->json(['message' => 'Trip not found'], 404);
+    }
+
+    return response()->json($trip, 200);
+}
+
+    public function getPagination()
+    {   
+        $trips = Trips::paginate(8);
+        return response()->json($trips, 200);
+    }
+
 }

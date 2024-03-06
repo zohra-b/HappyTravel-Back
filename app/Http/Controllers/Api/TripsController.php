@@ -11,9 +11,13 @@ use Illuminate\Support\Facades\Auth;
 class TripsController extends Controller
 {
     public function index()
-    {
-        $trips = Trips::all();
-        return response()->json($trips, 200);
+    {   
+        try {
+            $trips = Trips::all();
+            return response()->json($trips, 200);
+        }catch(\Exception $e) {
+            return response()->json(['message' => 'Error al recuperar los viajes.'], 500);
+        }
     }
 
     public function store(Request $request)
@@ -36,6 +40,7 @@ class TripsController extends Controller
             $user->trips()->save($trip);
     
             return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
+
         } else {
             return response()->json(['message' => 'No autorizado'], 401);
         }
@@ -43,12 +48,15 @@ class TripsController extends Controller
     }       
     public function destroy($id) {
         $trip = Trips::findOrFail($id);
+
         if(!$trip){
             return  response()->json(['message'=>'Viaje no encontrado'],404);
         }
-        $trip->delete();
-        
-        return response()->json(['message'=>'Se ha eliminado el viaje'],200);
+        if ($trip->delete()) {
+            return response()->json(['message' => 'Se ha eliminado el viaje'], 200);
+        } else {
+            return response()->json(['message' => 'Ha ocurrido un error al intentar eliminar el viaje'], 500);
+    }
     }
 
     public function search(Request $request)
@@ -58,7 +66,6 @@ class TripsController extends Controller
         ]);
         $trips=Trips::where('title', 'like', '%'.$request->input('search').'%' )
                 ->orWhere('location', 'like', '%'.$request->input('search').'%' )
-                ->orWhere('description', 'like', '%'.$request->input('search').'%' )
                 ->get();
         
         if($trips->count()===0){
@@ -72,16 +79,20 @@ class TripsController extends Controller
     $trip = Trips::find($id);
 
     if (!$trip) {
-        return response()->json(['message' => 'Trip not found'], 404);
+        return response()->json(['message' => 'Viaje no encontrado'], 404);
     }
 
     return response()->json($trip, 200);
-}
+    }
 
     public function getPagination()
     {   
-        $trips = Trips::paginate(8);
-        return response()->json($trips, 200);
+        try {
+            $trips = Trips::paginate(8);
+            return response()->json($trips, 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Ha ocurrido un error al recuperar los viajes'], 500);
+        }
     }
 
 
@@ -108,9 +119,9 @@ class TripsController extends Controller
 
             $trip->save();
 
-            return response()->json(['message' => 'Trip updated successfully'], 201);
+            return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
         } else {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['message' => 'No autorizado'], 401);
         }
     }
 }

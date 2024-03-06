@@ -21,3 +21,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('trip/{id}', [TripsController::class, 'getById']);
 });
 Route::get('/', [TripsController::class, 'index']);
+Route:: get('pag', [TripsController::class, 'getPagination']);

@@ -60,4 +60,11 @@ class TripsController extends Controller
 
     return response()->json($trip, 200);
 }
+
+    public function getPagination()
+    {   
+        $trips = Trips::paginate(8);
+        return response()->json($trips, 200);
+    }
+
 }

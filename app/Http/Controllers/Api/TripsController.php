@@ -34,12 +34,56 @@ class TripsController extends Controller
             $trip->description = $request->description;
 
             $user->trips()->save($trip);
-
-            return response()->json(['message' => 'Trip created successfully'], 201);
+    
+            return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
         } else {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['message' => 'No autorizado'], 401);
         }
+    
+    }       
+    public function destroy($id) {
+        $trip = Trips::findOrFail($id);
+        if(!$trip){
+            return  response()->json(['message'=>'Viaje no encontrado'],404);
+        }
+        $trip->delete();
+        
+        return response()->json(['message'=>'Se ha eliminado el viaje'],200);
     }
+
+    public function search(Request $request)
+    {
+        $request-> validate([
+            'search' => 'required|string|min:3'
+        ]);
+        $trips=Trips::where('title', 'like', '%'.$request->input('search').'%' )
+                ->orWhere('location', 'like', '%'.$request->input('search').'%' )
+                ->orWhere('description', 'like', '%'.$request->input('search').'%' )
+                ->get();
+        
+        if($trips->count()===0){
+            return  response()->json(['message'=>'No hay resultados que coincidan con su búsqueda'],404);
+        }
+            return response()->json($trips);
+    }
+
+    public function getById($id){
+        
+    $trip = Trips::find($id);
+
+    if (!$trip) {
+        return response()->json(['message' => 'Trip not found'], 404);
+    }
+
+    return response()->json($trip, 200);
+}
+
+    public function getPagination()
+    {   
+        $trips = Trips::paginate(8);
+        return response()->json($trips, 200);
+    }
+
 
     public function update(Request $request, $id)
     {

@@ -18,5 +18,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('logout', [UserController::class, 'logout']);
     Route::post('store', [TripsController::class, 'store']);
     Route::put('trip/{id}', [TripsController::class, 'update']);
+    Route::delete('trip/{id}',[TripsController::class, 'destroy']);
+    Route::get('trip/{id}', [TripsController::class, 'getById']);
 });
 Route::get('/', [TripsController::class, 'index']);
+Route::get('search', [TripsController::class,'search']);
+Route::get('page', [TripsController::class, 'getPagination']);

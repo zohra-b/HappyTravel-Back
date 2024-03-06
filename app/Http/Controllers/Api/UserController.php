@@ -66,7 +66,7 @@ class UserController extends Controller
                 'status' => 1,
                 'msg' => 'Inicio de sesión correctamente',
                 'access_token' => $token
-                ]);
+                ], 200);
 
             }else{
                 return response()->json(['status' => 0, 'msg' => 'Credenciales incorrectas'], 401);

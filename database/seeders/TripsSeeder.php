@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -12,88 +13,154 @@ class TripsSeeder extends Seeder
      */
     public function run(): void
     {
-        
-            $trips = [
-                [
-                    'title' => 'Fun Vacation',
-                    'location' => 'Puerto Rico',
-                    'image' => '',
-                    'description' => 'Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.',
-                    'user_id' => 1
-                ],
-                
-                
-                [
-                    'title' => 'Romantic Vacation',
-                    'location' => 'Italia',
-                    'image' => '',
-                    'description' => 'Pizza, ice cream. Disfruta de un viaje en el tiempo visitando los lugares más famosos del mundo',
-                    'user_id' => 1
-                ],
-                [
-                    'title' => 'Safari de aventura',
-                    'location' => 'Kenia',
-                    'image' => '',
-                    'description' => 'Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida',
-                    'user_id' => 1
-                ],
-                
-                [
-                    'title' => 'Escapada Soñada',
-                    'location' => 'Grecia',
-                    'image' => '',
-                    'description' => 'Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse',
-                    'user_id' => 1
-                ],
-    
-                [
-                    'title' => 'Vacaciones en el Hielo',
-                    'location' => 'Antartida',
-                    'image' => '',
-                    'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
-                    'user_id' => 1
-                ],
-    
-                [
-                    'title' => 'Auroras Boreales y naturaleza',
-                    'location' => 'Islandia',
-                    'image' => '',
-                    'description' => 'Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte',
-                    'user_id' => 1
-                
-                ],
-                [
-                    'title' => 'Playas paradisiacas y paz',
-                    'location' => 'Maldivas',
-                    'image' => '',
-                    'description' => 'Despertarse con el runrún del mar en su idílico bungaló en las Maldivas dará vida a la realidad tropical',
-                    'user_id' => 1
-                ],
-                [
-                    'title' => 'Salto Angel, una maravilla natural',
-                    'location' => 'Venezuela',
-                    'image' => '',
-                    'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir',
-                    'user_id' => 1
-                ],
-                [
-                    'title' => 'Islas Galapagos, el origen de las especies',
-                    'location' => 'Ecuador',
-                    'image' => '',
-                    'description' => 'Un viaje en el tiempo para entender por qué Darwin encontró su tierra de ensueño aquí. La flora y la fauna abundantes y las especies asombrosas dan color al ambiente en medio de la emoción de la aventura',
-                    'user_id' => 1
-                ],
-    
-                [
-                    'title' => 'Machu Pichu, tribus e historia',
-                    'location' => 'Perú',
-                    'image' => '',
-                    'description' => 'Pasear por el Camino Inca es un intenso viaje a siglos pasados y a las raíces de nuestra historia que permanecen vivas hasta el día de hoy',
-                    'user_id' => 1
-                ]
-    
-                ];
-              
-            DB::table('trips')->insert($trips);     }
 
+        $trips = [
+            [
+                'title' => 'Fun Vacation',
+                'location' => 'Puerto Rico',
+                'image' => '',
+                'description' => 'Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.',
+                'user_id' => 1
+            ],
+
+
+            [
+                'title' => 'Romantic Vacation',
+                'location' => 'Italia',
+                'image' => '',
+                'description' => 'Pizza, ice cream. Disfruta de un viaje en el tiempo visitando los lugares más famosos del mundo',
+                'user_id' => 2
+            ],
+            [
+                'title' => 'Safari de aventura',
+                'location' => 'Kenia',
+                'image' => '',
+                'description' => 'Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida',
+                'user_id' => 3
+            ],
+
+            [
+                'title' => 'Escapada Soñada',
+                'location' => 'Grecia',
+                'image' => '',
+                'description' => 'Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse',
+                'user_id' => 4
+            ],
+
+            [
+                'title' => 'Vacaciones en el Hielo',
+                'location' => 'Antartida',
+                'image' => '',
+                'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
+                'user_id' => 5
+            ],
+
+            [
+                'title' => 'Auroras Boreales y naturaleza',
+                'location' => 'Islandia',
+                'image' => '',
+                'description' => 'Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte',
+                'user_id' => 5
+
+            ],
+            [
+                'title' => 'Playas paradisiacas y paz',
+                'location' => 'Maldivas',
+                'image' => '',
+                'description' => 'Despertarse con el runrún del mar en su idílico bungaló en las Maldivas dará vida a la realidad tropical',
+                'user_id' => 6
+            ],
+            [
+                'title' => 'Salto Angel, una maravilla natural',
+                'location' => 'Venezuela',
+                'image' => '',
+                'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir',
+                'user_id' => 6
+            ],
+            [
+                'title' => 'Islas Galapagos, el origen de las especies',
+                'location' => 'Ecuador',
+                'image' => '',
+                'description' => 'Un viaje en el tiempo para entender por qué Darwin encontró su tierra de ensueño aquí. La flora y la fauna abundantes y las especies asombrosas dan color al ambiente en medio de la emoción de la aventura',
+                'user_id' => 1
+            ],
+
+            [
+                'title' => 'Machu Pichu, tribus e historia',
+                'location' => 'Perú',
+                'image' => '',
+                'description' => 'Pasear por el Camino Inca es un intenso viaje a siglos pasados y a las raíces de nuestra historia que permanecen vivas hasta el día de hoy',
+                'user_id' => 2
+            ],
+            [
+                'title' => 'París, la ciudad del amor',
+                'location' => 'Francia',
+                'image' => '',
+                'description' => 'París ofrece lugares históricos, monumentos, un ambiente agradable, cafés encantadores, parques y museos para satisfacer a cualquier viajero. La ciudad es el hogar de algunos de los edificios antiguos más emblemáticos del mundo, como Le Tour Eiffel, Notre Dame, Sacré Coeur, L´Arc de Triomphe, el Palacio de Versalles, el Moulin Rouge o el Hotel des Invalides.',
+                'user_id' => 3
+            ],
+            [
+                'title' => 'Safari y relax',
+                'location' => 'Kenia',
+                'image' => '',
+                'description' => 'Comenzamos en Nairobi, la capital, y continuamos hacia el Parque Nacional Amboseli, con 40.000 hectáreas donde disfrutar de las vistas del monte Kilimanjaro y de elefantes, cebras, búfalos, leones o jirafas. Seguimos observando animales en el Parque Nacional Tsavo, y terminamos con un poco de relax en la playa de Diani.',
+                'user_id' => 4
+            ],
+            [
+                'title' => 'New York, New York !',
+                'location' => 'Estados Unidos',
+                'image' => '',
+                'description' => 'Nueva York es una metrópolis internacional construida sobre los hombros de los inmigrantes y sus descendientes. La Ciudad de Nueva York es el hogar de ocho millones de personas y recibe más de 50 millones de visitantes por año.',
+                'user_id' => 6
+            ],
+            [
+                'title' => 'Islas Galapagos, el origen de las especies',
+                'location' => 'Ecuador',
+                'image' => '',
+                'description' => 'Un viaje en el tiempo para entender por qué Darwin encontró su tierra de ensueño aquí. La flora y la fauna abundantes y las especies asombrosas dan color al ambiente en medio de la emoción de la aventura',
+                'user_id' => 1
+            ],
+            [
+                'title' => 'Vive Estambul',
+                'location' => 'Turquía',
+                'image' => '',
+                'description' => 'Estambul debe su importancia histórica y su increíble patrimonio cultural y arquitectónico a su estratégica ubicación, a caballo entre el estrecho del Bósforo que separa Europa de Asia Menor. A través de la mayor parte de sus 2.500 años de larga historia, la ciudad (conocida primero como Bizancio, luego como Constantinopla y desde 1930 como Estambul) era un crisol de culturas.',
+                'user_id' => 3
+            ],
+            [
+                'title' => 'Vietnam a tu alcance',
+                'location' => 'Vietnam',
+                'image' => '',
+                'description' => 'No te pierdas este maravillo viaje, descubrirás la esencia de Vietnam pasando 8 noches en este espectacular destino. Además, pasarás una de las noches a bordo de un junco para descubrir la Bahía de Halong.
+                
+                Un viaje que quedará en tu recuerdo.',
+                'user_id' => 2
+            ],
+            [
+                'title' => 'Londres auténtico',
+                'location' => 'Reino Unido',
+                'image' => '',
+                'description' => 'Londres es una ciudad diversa y emocionante con algunas de las mejores vistas, atracciones y actividades del mundo. Con tanto que hacer, es difícil delimitar la larga lista de razones para visitarla, pero a continuación encontrará nuestro top 10. Principales Lugares de interés: No podrá contener la emoción por las increíbles atracciones de Londres.',
+                'user_id' => 6
+            ],
+            [
+                'title' => 'Lanzarote, tierra de fuego',
+                'location' => 'España',
+                'image' => '',
+                'description' => 'Al igual que con las otras Islas Canarias, Lanzarote es de origen volcánico. Debido a las recientes erupciones durante los siglos 18 y 19, muchas partes de Lanzarote parecen ser de otro mundo, a menudo descrito como lunar.',
+                'user_id' => 4
+            ],
+            [
+                'title' => 'Leyendas de Túnez',
+                'location' => 'Túnez',
+                'image' => '',
+                'description' => 'Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara.',
+                'user_id' => 2
+            ],
+          
+
+        ];
+
+        DB::table('trips')->insert($trips);
     }
+}

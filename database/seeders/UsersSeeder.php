@@ -16,15 +16,37 @@ class UsersSeeder extends Seeder
     {
         $users = [
             [
+                'name' => 'Alicia',
+                'email' => 'ali123@gmail.com',
+                'password' => Hash::make('123456'),
+            ],
+            [
+                'name' => 'Caro',
+                'email' => 'caro123@gmail.com',
+                'password' => Hash::make('123456'),
+            ], 
+            [
+                'name' => 'Gaby I',
+                'email' => 'gabyi123@gmail.com',
+                'password' => Hash::make('123456'),
+            ], 
+            [
+                'name' => 'Gaby P',
+                'email' => 'gabyp123@gmail.com',
+                'password' => Hash::make('123456'),
+            ], 
+            [
                 'name' => 'Laura',
                 'email' => 'lau123@gmail.com',
                 'password' => Hash::make('123456'),
             ], 
             [
-                'name' => 'Alicia',
-                'email' => 'ali@gmail.com',
+                'name' => 'Zohra',
+                'email' => 'zo123@gmail.com',
                 'password' => Hash::make('123456'),
-            ]
+            ], 
+            
+            
             ];
             DB::table('users')->insert($users);     }
     }

@@ -49,6 +49,10 @@ class TripsController extends Controller
     public function destroy($id) {
         $trip = Trips::findOrFail($id);
 
+        if ($trip->user_id !== Auth::id()) {
+            return response()->json(['message' => 'No autorizado'], 401);
+        }
+
         if(!$trip){
             return  response()->json(['message'=>'Viaje no encontrado'],404);
         }
@@ -99,29 +103,29 @@ class TripsController extends Controller
     public function update(Request $request, $id)
     {
         $trip = Trips::findOrFail($id);
+
+        if ($trip->user_id !== Auth::id()) {
+            return response()->json(['message' => 'No autorizado'], 401);
+        }
         $request->validate([
             'title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'description' => 'string|max:500',
         ]);
 
-        $user = Auth::user();
 
-        if ($user) {
-            $trip->title = $request->title;
-            $trip->location = $request->location;
-            $trip->description = $request->description;
-
-            if ($request->hasFile('image')) {
-                $imagePath = $request->file('image')->store('images');
-                $trip->image = $imagePath;
-            }
+        $trip->title = $request->title;
+        $trip->location = $request->location;
+        $trip->description = $request->description;
+    
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images');
+            $trip->image = $imagePath;
+        }
 
             $trip->save();
 
             return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
-        } else {
-            return response()->json(['message' => 'No autorizado'], 401);
-        }
+        
     }
 }

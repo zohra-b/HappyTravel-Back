@@ -14,7 +14,7 @@ class Trips extends Model
     protected $fillable = [
         'title',
         'location',
-        'image',
+        'image_path',
         'description'
     ];
 
@@ -22,6 +22,12 @@ class Trips extends Model
         "created_at",
         "updated_at"
     ];
+
+    public function getImageUrlAttribute()
+    {
+        // Assuming you're storing images in the public storage directory
+        return asset('storage/' . $this->image_path);
+    }
 
     public function user(){
         return $this->belongsTo(User::class);

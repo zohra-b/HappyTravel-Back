@@ -7,15 +7,16 @@ use App\Models\Trips;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class TripsController extends Controller
 {
     public function index()
-    {   
+    {
         try {
             $trips = Trips::all();
             return response()->json($trips, 200);
-        }catch(\Exception $e) {
+        } catch (\Exception $e) {
             return response()->json(['message' => 'Error al recuperar los viajes.'], 500);
         }
     }
@@ -34,63 +35,67 @@ class TripsController extends Controller
             $trip = new Trips();
             $trip->title = $request->title;
             $trip->location = $request->location;
-            $trip->image = $request->image;
+            
             $trip->description = $request->description;
 
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('public/images');
+                $trip->image_path = str_replace('public/', '', $imagePath);
+            };
             $user->trips()->save($trip);
-    
-            return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
 
+            return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
         } else {
             return response()->json(['message' => 'No autorizado'], 401);
         }
-    
-    }       
-    public function destroy($id) {
+    }
+    public function destroy($id)
+    {
         $trip = Trips::findOrFail($id);
 
         if ($trip->user_id !== Auth::id()) {
             return response()->json(['message' => 'No autorizado'], 401);
         }
 
-        if(!$trip){
-            return  response()->json(['message'=>'Viaje no encontrado'],404);
+        if (!$trip) {
+            return  response()->json(['message' => 'Viaje no encontrado'], 404);
         }
         if ($trip->delete()) {
             return response()->json(['message' => 'Se ha eliminado el viaje'], 200);
         } else {
             return response()->json(['message' => 'Ha ocurrido un error al intentar eliminar el viaje'], 500);
-    }
+        }
     }
 
     public function search(Request $request)
     {
-        $request-> validate([
+        $request->validate([
             'search' => 'required|string|min:3'
         ]);
-        $trips=Trips::where('title', 'like', '%'.$request->input('search').'%' )
-                ->orWhere('location', 'like', '%'.$request->input('search').'%' )
-                ->get();
-        
-        if($trips->count()===0){
-            return  response()->json(['message'=>'No hay resultados que coincidan con su búsqueda'],404);
+        $trips = Trips::where('title', 'like', '%' . $request->input('search') . '%')
+            ->orWhere('location', 'like', '%' . $request->input('search') . '%')
+            ->get();
+
+        if ($trips->count() === 0) {
+            return  response()->json(['message' => 'No hay resultados que coincidan con su búsqueda'], 404);
         }
-            return response()->json($trips);
+        return response()->json($trips);
     }
 
-    public function getById($id){
-        
-    $trip = Trips::find($id);
+    public function getById($id)
+    {
 
-    if (!$trip) {
-        return response()->json(['message' => 'Viaje no encontrado'], 404);
-    }
+        $trip = Trips::find($id);
 
-    return response()->json($trip, 200);
+        if (!$trip) {
+            return response()->json(['message' => 'Viaje no encontrado'], 404);
+        }
+
+        return response()->json($trip, 200);
     }
 
     public function getPagination()
-    {   
+    {
         try {
             $trips = Trips::paginate(8);
             return response()->json($trips, 200);
@@ -108,8 +113,9 @@ class TripsController extends Controller
             return response()->json(['message' => 'No autorizado'], 401);
         }
         $request->validate([
-            'title' => 'required|string|max:255',
-            'location' => 'required|string|max:255',
+            'title' => 'string|max:255',
+            'location' => 'string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'string|max:500',
         ]);
 
@@ -117,15 +123,16 @@ class TripsController extends Controller
         $trip->title = $request->title;
         $trip->location = $request->location;
         $trip->description = $request->description;
-    
+
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images');
-            $trip->image = $imagePath;
+            $imagePath = $request->file('image')->store('public/images');
+            $trip->image_path = str_replace('public/', '', $imagePath);
         }
 
-            $trip->save();
-
-            return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
         
+
+        $trip->save();
+
+        return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
     }
 }

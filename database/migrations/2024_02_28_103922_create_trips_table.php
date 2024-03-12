@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("location");
-            $table->binary("image");
+            $table->string("image_path")->nullable();
             $table->string("description", 500);
             $table->timestamps();
         });

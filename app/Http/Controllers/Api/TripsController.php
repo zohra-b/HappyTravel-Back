@@ -35,13 +35,14 @@ class TripsController extends Controller
             $trip = new Trips();
             $trip->title = $request->title;
             $trip->location = $request->location;
-            
+
             $trip->description = $request->description;
 
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('public/images');
-                $trip->image_path = str_replace('public/', '', $imagePath);
+                $trip->image_path = str_replace('public/', 'storage/', $imagePath);
             };
+           
             $user->trips()->save($trip);
 
             return response()->json(['message' => 'Viaje se ha creado correctamente'], 201);
@@ -126,10 +127,11 @@ class TripsController extends Controller
 
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('public/images');
-            $trip->image_path = str_replace('public/', '', $imagePath);
+            $trip->image_path = $imagePath;
+            //$trip->image_path = str_replace('/public', '', $imagePath);
         }
 
-        
+
 
         $trip->save();
 

@@ -20,7 +20,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('logout', [UserController::class, 'logout']);
     Route::get('trip/{id}', [TripsController::class, 'getById']);
     Route::post('store', [TripsController::class, 'store']);
-    Route::put('trip/{id}', [TripsController::class, 'update']);
+    Route::post('trip/{id}', [TripsController::class, 'update']);
     Route::delete('trip/{id}',[TripsController::class, 'destroy']);
 });
 

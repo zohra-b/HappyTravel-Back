@@ -125,12 +125,11 @@ class TripsController extends Controller
         $trip->location = $request->location;
         $trip->description = $request->description;
 
+       
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('public/images');
-            $trip->image_path = $imagePath;
-            //$trip->image_path = str_replace('/public', '', $imagePath);
-        }
-
+            $trip->image_path = str_replace('public/', 'storage/', $imagePath);
+        };
 
 
         $trip->save();

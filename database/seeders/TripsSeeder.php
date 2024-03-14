@@ -50,7 +50,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Vacaciones en el Hielo',
                 'location' => 'Antartida',
-                'image_path' => 'storage/images/hh.jpg',
+                'image_path' => 'storage/images/antartida.jpg',
                 'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida. Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
                 'user_id' => 5
             ],

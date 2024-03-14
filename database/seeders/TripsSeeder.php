@@ -18,7 +18,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Fun Vacation',
                 'location' => 'Puerto Rico',
-                'image_path' => 'storage/images/tropical-beach.jpg',
+                'image_path' => 'storage/images/tropical-beach2.jpg',
                 'description' => 'Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas. Playa, sol y Arena. Disfruta de las aguas más claras y de las puestas de sol más intensas.',
                 'user_id' => 1
             ],
@@ -102,7 +102,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Safari y relax',
                 'location' => 'Kenia',
-                'image_path' => 'storage/images/safari.jpg',
+                'image_path' => 'storage/images/safari2.jpg',
                 'description' => 'Comenzamos en Nairobi, la capital, y continuamos hacia el Parque Nacional Amboseli, con 40.000 hectáreas donde disfrutar de las vistas del monte Kilimanjaro y de elefantes, cebras, búfalos, leones o jirafas. Seguimos observando animales en el Parque Nacional Tsavo, y terminamos con un poco de relax en la playa de Diani.',
                 'user_id' => 4
             ],

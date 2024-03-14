@@ -72,7 +72,8 @@ class UserController extends Controller
                  return response()->json([
                 'status' => 1,
                 'msg' => 'Inicio de sesión correctamente',
-                'access_token' => $token
+                'access_token' => $token,
+                'user_id' => $user->id
                 ], 200);
 
             }else{

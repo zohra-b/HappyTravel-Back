@@ -120,6 +120,7 @@ class TripsController extends Controller
             'description' => 'string|max:500',
         ]);
 
+        $oldImagePath = $trip->image_path;
 
         $trip->title = $request->title;
         $trip->location = $request->location;
@@ -127,6 +128,9 @@ class TripsController extends Controller
 
        
         if ($request->hasFile('image')) {
+            if ($oldImagePath && Storage::exists(str_replace('storage/', 'public/', $oldImagePath))) {
+                Storage::delete(str_replace('storage/', 'public/', $oldImagePath));
+
             $imagePath = $request->file('image')->store('public/images');
             $trip->image_path = str_replace('public/', 'storage/', $imagePath);
         };
@@ -136,4 +140,4 @@ class TripsController extends Controller
 
         return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
     }
-}
+}}

@@ -35,7 +35,7 @@ class TripsSeeder extends Seeder
                 'title' => 'Safari de aventura',
                 'location' => 'Kenia',
                 'image_path' => 'storage/images/safari.jpg',
-                'description' => 'Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida. Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida. Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida.  ',
+                'description' => 'Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida. Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida.  ',
                 'user_id' => 3
             ],
 
@@ -43,7 +43,7 @@ class TripsSeeder extends Seeder
                 'title' => 'Escapada Soñada',
                 'location' => 'Grecia',
                 'image_path' => 'storage/images/grecia.jpg',
-                'description' => 'Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse. Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse. Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse',
+                'description' => 'Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse. Todo es mejor en Grecia, donde el vino es más suave, las aguas son más claras y las puestas de sol son más intensas. Los viajeros nunca quieren irse.  Los viajeros nunca quieren irse',
                 'user_id' => 4
             ],
 
@@ -51,7 +51,7 @@ class TripsSeeder extends Seeder
                 'title' => 'Vacaciones en el Hielo',
                 'location' => 'Antartida',
                 'image_path' => 'storage/images/mountain-winter.jpg',
-                'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida. Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida. Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
+                'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida. Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
                 'user_id' => 5
             ],
 
@@ -59,7 +59,7 @@ class TripsSeeder extends Seeder
                 'title' => 'Auroras Boreales y naturaleza',
                 'location' => 'Islandia',
                 'image_path' => 'storage/images/IslaEjemplo.jpg',
-                'description' => 'Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte. Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte. Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte.',
+                'description' => 'Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte. Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae.  Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte.',
                 'user_id' => 5
 
             ],
@@ -74,7 +74,7 @@ class TripsSeeder extends Seeder
                 'title' => 'Salto Angel, una maravilla natural',
                 'location' => 'Venezuela',
                 'image_path' => 'storage/images/IslaEjemplo.jpg',
-                'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. ',
+                'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela.  Una experiencia indescriptible que debes vivir. ',
                 'user_id' => 6
             ],
             [
@@ -96,14 +96,14 @@ class TripsSeeder extends Seeder
                 'title' => 'París, la ciudad del amor',
                 'location' => 'Francia',
                 'image_path' => 'storage/images/eiffel-tower.jpg',
-                'description' => 'París ofrece lugares históricos, monumentos, un ambiente agradable, cafés encantadores, parques y museos para satisfacer a cualquier viajero. La ciudad es el hogar de algunos de los edificios antiguos más emblemáticos del mundo, como Le Tour Eiffel, Notre Dame, Sacré Coeur, L´Arc de Triomphe, el Palacio de Versalles, el Moulin Rouge o el Hotel des Invalides. París ofrece lugares históricos, monumentos, un ambiente agradable, cafés encantadores, parques y museos para satisfacer a cualquier viajero. ',
+                'description' => 'París ofrece lugares históricos, monumentos, un ambiente agradable, cafés encantadores, parques y museos para satisfacer a cualquier viajero. La ciudad es el hogar de algunos de los edificios antiguos más emblemáticos del mundo, como Le Tour Eiffel, Notre Dame, Sacré Coeur, L´Arc de Triomphe, el Palacio de Versalles, el Moulin Rouge o el Hotel des Invalides. ',
                 'user_id' => 3
             ],
             [
                 'title' => 'Safari y relax',
                 'location' => 'Kenia',
                 'image_path' => 'storage/images/safari.jpg',
-                'description' => 'Comenzamos en Nairobi, la capital, y continuamos hacia el Parque Nacional Amboseli, con 40.000 hectáreas donde disfrutar de las vistas del monte Kilimanjaro y de elefantes, cebras, búfalos, leones o jirafas. Seguimos observando animales en el Parque Nacional Tsavo, y terminamos con un poco de relax en la playa de Diani.Comenzamos en Nairobi, la capital, y continuamos hacia el Parque Nacional Amboseli.',
+                'description' => 'Comenzamos en Nairobi, la capital, y continuamos hacia el Parque Nacional Amboseli, con 40.000 hectáreas donde disfrutar de las vistas del monte Kilimanjaro y de elefantes, cebras, búfalos, leones o jirafas. Seguimos observando animales en el Parque Nacional Tsavo, y terminamos con un poco de relax en la playa de Diani.',
                 'user_id' => 4
             ],
             [
@@ -113,7 +113,7 @@ class TripsSeeder extends Seeder
                 'description' => 'Nueva York es una metrópolis internacional construida sobre los hombros de los inmigrantes y sus descendientes. La Ciudad de Nueva York es el hogar de ocho millones de personas y recibe más de 50 millones de visitantes por año. Nueva York es una metrópolis internacional construida sobre los hombros de los inmigrantes y sus descendientes. La Ciudad de Nueva York es el hogar de ocho millones de personas y recibe más de 50 millones de visitantes por año.',
                 'user_id' => 6
             ],
-
+            
             [
                 'title' => 'Vive Estambul',
                 'location' => 'Turquía',
@@ -125,32 +125,31 @@ class TripsSeeder extends Seeder
                 'title' => 'Vietnam a tu alcance',
                 'location' => 'Vietnam',
                 'image_path' => 'storage/images/vietnam.jpg',
-                'description' => 'No te pierdas este maravillo viaje, descubrirás la esencia de Vietnam pasando 8 noches en este espectacular destino. Además, pasarás una de las noches a bordo de un junco para descubrir la Bahía de Halong. No te pierdas este maravillo viaje, descubrirás la esencia de Vietnam pasando 8 noches en este espectacular destino. Además, pasarás una de las noches a bordo de un junco para descubrir la Bahía de Halong.
-                Un viaje que quedará en tu recuerdo.',
+                'description' => 'No te pierdas este maravillo viaje, descubrirás la esencia de Vietnam pasando 8 noches en este espectacular destino. Además, pasarás una de las noches a bordo de un junco para descubrir la Bahía de Halong. No te pierdas este maravillo viaje, descubrirás la esencia de Vietnam pasando 8 noches en este espectacular destino. n viaje que quedará en tu recuerdo.',
                 'user_id' => 2
             ],
             [
                 'title' => 'Londres auténtico',
                 'location' => 'Reino Unido',
                 'image_path' => 'storage/images/big-ben.jpg',
-                'description' => 'Londres es una ciudad diversa y emocionante con algunas de las mejores vistas, atracciones y actividades del mundo. Con tanto que hacer, es difícil delimitar la larga lista de razones para visitarla, pero a continuación encontrará nuestro top 10. Principales Lugares de interés: No podrá contener la emoción por las increíbles atracciones de Londres. Londres es una ciudad diversa y emocionante con algunas de las mejores vistas, atracciones y actividades del mundo. ',
+                'description' => 'Londres es una ciudad diversa y emocionante con algunas de las mejores vistas, atracciones y actividades del mundo. Con tanto que hacer, es difícil delimitar la larga lista de razones para visitarla, pero a continuación encontrará nuestro top 10. Principales Lugares de interés: No podrá contener la emoción por las increíbles atracciones de Londres.',
                 'user_id' => 6
             ],
             [
                 'title' => 'Lanzarote, tierra de fuego',
                 'location' => 'España',
                 'image_path' => 'storage/images/IslaEjemplo.jpg',
-                'description' => 'Al igual que con las otras Islas Canarias, Lanzarote es de origen volcánico. Debido a las recientes erupciones durante los siglos 18 y 19, muchas partes de Lanzarote parecen ser de otro mundo, a menudo descrito como lunar. Al igual que con las otras Islas Canarias, Lanzarote es de origen volcánico. Debido a las recientes erupciones durante los siglos 18 y 19, muchas partes de Lanzarote parecen ser de otro mundo, a menudo descrito como lunar.',
+                'description' => 'Al igual que con las otras Islas Canarias, Lanzarote es de origen volcánico. Debido a las recientes erupciones durante los siglos 18 y 19, muchas partes de Lanzarote parecen ser de otro mundo, a menudo descrito como lunar.',
                 'user_id' => 4
             ],
             [
                 'title' => 'Leyendas de Túnez',
                 'location' => 'Túnez',
                 'image_path' => 'storage/images/tunez.jpg',
-                'description' => 'Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara. Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara.Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara.',
+                'description' => 'Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara.Túnez es sol, es playa, es calor y amabilidad. Pero también es desierto, es aventura, es exotismo, es historia y riqueza cultural. El paraíso a las puertas del Sáhara.',
                 'user_id' => 2
             ],
-
+          
 
         ];
 

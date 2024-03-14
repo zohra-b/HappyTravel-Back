@@ -22,5 +22,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('store', [TripsController::class, 'store']);
     Route::post('trip/{id}', [TripsController::class, 'update']);
     Route::delete('trip/{id}',[TripsController::class, 'destroy']);
+    Route::get('trip/user/{user_id}', [TripsController::class, 'getTripsbyUserId']);
 });
 

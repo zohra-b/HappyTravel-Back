@@ -50,7 +50,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Vacaciones en el Hielo',
                 'location' => 'Antartida',
-                'image_path' => 'storage/images/mountain-winter.jpg',
+                'image_path' => 'storage/images/hh.jpg',
                 'description' => 'Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida. Imagina una ballena emergiendo a tu lado para saludarte mientras los pingüinos brincan en la proa de tu bote cuando navegas junto a un iceberg en kayak. Esto es la Antártida',
                 'user_id' => 5
             ],
@@ -58,7 +58,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Auroras Boreales y naturaleza',
                 'location' => 'Islandia',
-                'image_path' => 'storage/images/IslaEjemplo.jpg',
+                'image_path' => 'storage/images/boreales.jpg',
                 'description' => 'Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte. Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae.  Difícilmente hay un país en el mundo que luzca tantos paisajes trascendentales en tan poco tiempo. La belleza te atrae. La diversidad hace que nunca quieras irte.',
                 'user_id' => 5
 
@@ -73,14 +73,14 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Salto Angel, una maravilla natural',
                 'location' => 'Venezuela',
-                'image_path' => 'storage/images/IslaEjemplo.jpg',
+                'image_path' => 'storage/images/venezuela.jpg',
                 'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir. El Salto Ángel es una de las mayores atracciones turísticas de Venezuela.  Una experiencia indescriptible que debes vivir. ',
                 'user_id' => 6
             ],
             [
                 'title' => 'Islas Galapagos, el origen de las especies',
                 'location' => 'Ecuador',
-                'image_path' => 'storage/images/IslaEjemplo.jpg',
+                'image_path' => 'storage/images/galapagos.jpg',
                 'description' => 'Un viaje en el tiempo para entender por qué Darwin encontró su tierra de ensueño aquí. La flora y la fauna abundantes y las especies asombrosas dan color al ambiente en medio de la emoción de la aventura. Un viaje en el tiempo para entender por qué Darwin encontró su tierra de ensueño aquí. La flora y la fauna abundantes y las especies asombrosas dan color al ambiente en medio de la emoción de la aventura.',
                 'user_id' => 1
             ],
@@ -117,7 +117,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Vive Estambul',
                 'location' => 'Turquía',
-                'image_path' => 'storage/images/IslaEjemplo.jpg',
+                'image_path' => 'storage/images/istambul.jpg',
                 'description' => 'Estambul debe su importancia histórica y su increíble patrimonio cultural y arquitectónico a su estratégica ubicación, a caballo entre el estrecho del Bósforo que separa Europa de Asia Menor. A través de la mayor parte de sus 2.500 años de larga historia, la ciudad (conocida primero como Bizancio, luego como Constantinopla y desde 1930 como Estambul) era un crisol de culturas.',
                 'user_id' => 3
             ],
@@ -138,7 +138,7 @@ class TripsSeeder extends Seeder
             [
                 'title' => 'Lanzarote, tierra de fuego',
                 'location' => 'España',
-                'image_path' => 'storage/images/IslaEjemplo.jpg',
+                'image_path' => 'storage/images/lanzarote.jpg',
                 'description' => 'Al igual que con las otras Islas Canarias, Lanzarote es de origen volcánico. Debido a las recientes erupciones durante los siglos 18 y 19, muchas partes de Lanzarote parecen ser de otro mundo, a menudo descrito como lunar.',
                 'user_id' => 4
             ],

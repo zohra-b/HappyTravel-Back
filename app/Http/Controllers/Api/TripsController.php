@@ -134,6 +134,7 @@ class TripsController extends Controller
             $imagePath = $request->file('image')->store('public/images');
             $trip->image_path = str_replace('public/', 'storage/', $imagePath);
         };
+            
 
 
         $trip->save();

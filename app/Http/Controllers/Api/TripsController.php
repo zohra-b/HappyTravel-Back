@@ -140,4 +140,25 @@ class TripsController extends Controller
 
         return response()->json(['message' => 'Viaje actualizado correctamente'], 201);
     }
-}}
+    }
+
+    
+    public function getTripsbyUserId($user_id)
+{
+    try {
+        $user = User::find($user_id);
+        
+        if (!$user) {
+            return response()->json(['message' => 'Usuario no dispone de viajes'], 404);
+        }
+
+        $trips = $user->trips()->get();
+
+        return response()->json($trips, 200);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Error al recuperar los viajes.'], 500);
+    }
+}
+
+
+}

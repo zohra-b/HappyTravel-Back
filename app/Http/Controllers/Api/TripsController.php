@@ -62,9 +62,14 @@ class TripsController extends Controller
             return  response()->json(['message' => 'Viaje no encontrado'], 404);
         }
         if ($trip->delete()) {
+            
+        $oldImagePath = $trip->image_path;
+        if ($oldImagePath && Storage::exists(str_replace('storage/', 'public/', $oldImagePath))) {
+            Storage::delete(str_replace('storage/', 'public/', $oldImagePath));
             return response()->json(['message' => 'Se ha eliminado el viaje'], 200);
         } else {
             return response()->json(['message' => 'Ha ocurrido un error al intentar eliminar el viaje'], 500);
+        }
         }
     }
 

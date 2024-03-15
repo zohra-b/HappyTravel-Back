@@ -80,6 +80,8 @@ y finalmente para ver el proyecto en tu navegador ejecuta el comando
 
 Y disfruta de la experiencia de ver y guardar destinos.
 
+Puedes acceder a la documentación de la API en este enlace : https://github.com/AliciaoE/HappyTravel-Back/blob/main/HAPPY%20TRAVEL%20API%20DOC.pdf
+
 Si quieres acceder al reposorio del frontend del proyecto, sigue este enlace: https://github.com/AliciaoE/HappyTravel-Front.git
 
 ## Equipo Hacker Cats

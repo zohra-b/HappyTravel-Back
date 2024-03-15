@@ -85,7 +85,7 @@ class UserController extends Controller
         }
     }
     
-    public function userProfile()
+    public function getUserProfile()
     {
         return response()->json([
             'status' => 1,

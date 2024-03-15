@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+#  Happy Travel by Hacker Cats
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## 📓 Tabla de contenidos 
+   1. [Información General](#información-general)
+   2. [Mockups](#mockups)
+   3. [Tecnologías](#tecnologías)
+   4. [Herramientas](#herramientas)
+   5. [Instalación](#instalación)
+   6. [Nuestro equipo](#equipo-hacker-cats)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🗃 Información General
+La compañía HappyTravel nos ha contratado para desarrollar una plataforma web que permita conocer y compartir destinos de ensueño y las razones por las que resultan tan atractivos. El objetivo de la página es que las personas no registrados que la visitan puedan explorar los destinos, y que las personas autenticadas, además de explorar destinos, puedan también crear, editar y eliminar sus propias entradas de destinos.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Mockups
 
-## Learning Laravel
+#### Atomic Design
+<img src="./public/atomic_design.jpg" width="900px">
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Home - desktop
+   <img src="./public/home_figma.jpg" width=900px>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Destino - desktop
+   <img src="./public/show_logged.jpg" width=900px>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠 Tecnologías
+<div>
+<img alt="Static Badge" src="https://img.shields.io/badge/Laravel-11.0.6-blue">
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/PHP-4.2.12-blue">
+<br>
 
-### Premium Partners
+</div>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠 Herramientas
+<div>
+<img alt="Static Badge" src="https://img.shields.io/badge/XAMPP-green"> 
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/Postman-green"> 
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/MySQL-green"> 
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/Figma-green"> 
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/Visual_Studio_Code-green">
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/Trello-green">
+<br>
+<img alt="Static Badge" src="https://img.shields.io/badge/GitHub-green">
+<br>
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Aquí tienes una breve descripción de cómo poder ver nuestro proyecto.
+Para ejecutarlo necesitas tener conocimientos previos sobre como funciona Mamp/Xamp y tener instalado composer.
 
-## License
+Sigue estos pasos para acceder al proyecto:
+1. Clona este repositorio en tu máquina local:  https://github.com/AliciaoE/HappyTravel-Back
+2. Coloca la carpeta del proyecto en la carpeta de proyectos de tu MAMP o XAMPP según sea el caso.
+3. Crea la base de datos y la tabla:
+- Abre tu gestor de bases de datos (por ejemplo, phpMyAdmin).
+- Crea una nueva base de datos con el nombre  "happy_travel". Las tablas las realizaremos desde tu editor de código.
+4. Abre en tu editor de texto el proyecto, abre su terminal y dentro de la carpeta laravel debes poner
+`composer install`
+después, para cargar las tablas del proyecto, escribe el comando
+`php artisan migrate`
+Ya que se trata de una aplicación para guardar y compartir destinos, hemos creado los seeders para tener de antemano algunos datos en la base de datos. Estos seeders te permitirán tener 10 destinos ya publicados. No podrás borrarlos, ni editarlos a diferencia de los que cargues tú. Para poder tener estos 10 destinos creados a través de seeders, escribe en la terminal
+`php artisan db:seed`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+y finalmente para ver el proyecto en tu navegador ejecuta el comando 
+
+`php artisan serve`
+
+Y disfruta de la experiencia de ver y guardar destinos.
+
+Puedes acceder a la documentación de la API en este enlace : https://github.com/AliciaoE/HappyTravel-Back/blob/main/HAPPY%20TRAVEL%20API%20DOC.pdf
+
+Si quieres acceder al reposorio del frontend del proyecto, sigue este enlace: https://github.com/AliciaoE/HappyTravel-Front.git
+
+## Equipo Hacker Cats
+
+Somos un grupo de desarrolladoras unidas por la ilusión de aprender más sobre código. Encuéntranos en:
+
+Alicia: 
+- https://github.com/AliciaoE
+- https://www.linkedin.com/in/alicia-ontiveros-escudero/
+
+Carolina:
+- https://github.com/conuvedevegana
+- https://www.linkedin.com/in/carolina-delfa-silvestre/
+
+Gabriela I:
+- https://github.com/GabriiCoder
+- https://www.linkedin.com/in/gabriela-irimia/
+
+Gabriela P:
+- https://github.com/annaLucian
+- https://www.linkedin.com/in/gabriela-poves-navarro/
+
+Laura:
+- https://github.com/ImLauraGS
+- https://www.linkedin.com/in/laura-gil-solano/
+
+Zohra:
+- https://github.com/zohra-b
+- https://www.linkedin.com/in/z-bellamine/

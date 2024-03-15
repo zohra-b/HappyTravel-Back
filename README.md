@@ -72,7 +72,7 @@ Sigue estos pasos para acceder al proyecto:
 después, para cargar las tablas del proyecto, escribe el comando
 `php artisan migrate`
 Ya que se trata de una aplicación para guardar y compartir destinos, hemos creado los seeders para tener de antemano algunos datos en la base de datos. Estos seeders te permitirán tener 10 destinos ya publicados. No podrás borrarlos, ni editarlos a diferencia de los que cargues tú. Para poder tener estos 10 destinos creados a través de seeders, escribe en la terminal
-`php artisan db:seed --class=DestinationsTableSeeder`
+`php artisan db:seed`
 
 y finalmente para ver el proyecto en tu navegador ejecuta el comando 
 

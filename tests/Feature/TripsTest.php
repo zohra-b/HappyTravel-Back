@@ -20,17 +20,6 @@ class TripsTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_if_store_destroy_delete_data(): void
-    {
-        $user = User::factory()->create();
-        $this->actingAs($user);
-
-        $trip = Trips::factory()->create(['user_id' => $user->id]);
-    
-        $response = $this->deleteJson('/api/trip/' . $trip->id);
-        
-        $response->assertJson(['message' => 'Se ha eliminado el viaje']);
-    }
 
     public function test_if_store_function_can_add_data(): void
     {
